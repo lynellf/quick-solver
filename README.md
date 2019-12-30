@@ -48,7 +48,7 @@ type TVariable = {
 
 **Current Value:** The starting value of our variable.
 
-**Min and Max: **The variable object has two optional parameters, min and max, which will define the upper and lower bounds.
+**Min and Max:** The variable object has two optional parameters, min and max, which will define the upper and lower bounds.
 
 > You run a small custom furniture shop and make custom tables and dressers.
 > Each week you're limited to 300 square feet of wood, 110 hours of labor, and 400 square feet of storage.
