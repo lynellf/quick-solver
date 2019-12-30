@@ -80,4 +80,11 @@ const model = {
 };
 const optimizer = new Solver(model);
 const result = optimizer.solve();
+
+/**
+ * { type: 'max',
+      solution: 14400,
+      metObjective: true,
+      variables: [ 8, 3 ] }
+ */
 ```
