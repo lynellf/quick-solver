@@ -8,6 +8,8 @@ I've tried many solvers over the past few weeks and I didn't like any of them. j
 
 So... I made my own
 
+This solver falls into the realm of a "Brute Force" technique. So it's not performant by any means. However, this apporach may be all that I need given how small the scope of my initial problem is.
+
 **Intergers only.**
 
 ## API
