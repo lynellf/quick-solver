@@ -76,7 +76,7 @@ describe("A solver which doesn't self-destruct", () => {
 
     const model = {
       constraints,
-      maxAttempts: 15000,
+      maxAttempts: 200000,
       objective,
       type: "max" as "max",
       variables

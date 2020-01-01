@@ -1,19 +1,25 @@
-import { Variable } from "../variable/variable";
+import Variable from "../variable/variable";
 declare type TSolverModel = {
+    constraints: ((...args: Variable[]) => boolean)[];
     maxAttempts?: number;
-    constraints: ((args: Variable[]) => boolean)[];
-    objective: <C, V>(cons: C[], vars: V[]) => boolean;
+    objective: (...variables: Variable[]) => number;
+    type: "min" | "max";
     variables: Variable[];
 };
-export declare class Solver {
-    constraints: ((args: Variable[]) => boolean)[];
-    objective: <C, V>(cons: C[], vars: V[]) => boolean;
-    variables: Variable[];
+export default class Solver {
+    constraints: ((...args: Variable[]) => boolean)[];
+    currentOutput: number;
     maxAttempts: number;
-    constructor({ variables, objective, constraints, maxAttempts }: TSolverModel);
+    objective: (...variables: Variable[]) => number;
+    successVars: number[];
+    type: "min" | "max";
+    variables: Variable[];
+    constructor({ constraints, maxAttempts, objective, type, variables }: TSolverModel);
     solve: () => {
-        variables: Variable[];
-        currentAttempts: number;
+        type: "max" | "min";
+        solution: number;
+        metObjective: boolean;
+        variables: number[];
     };
 }
 export {};

@@ -3,7 +3,7 @@ declare type TVariable = {
     max?: number;
     min?: number;
 };
-export declare class Variable {
+export default class Variable {
     currentVal: number;
     private min;
     private max;
